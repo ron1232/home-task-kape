@@ -16,10 +16,18 @@ h6 {
   margin: 0;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  // justify-content: center;
+  align-items: center;
+}
+
 @import "./fonts";
 @import "./topbar";
 @import "./header";
 @import "./cards";
 @import "./virus-report";
 @import "./experts-saying";
+@import "./features";
 @import "./footer";

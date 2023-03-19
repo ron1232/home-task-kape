@@ -1,0 +1,41 @@
+.features {
+  color: #2e2e39;
+  background: #e8effca6;
+  width: 59.375%;
+  height: 868px;
+  margin-top: 124px;
+  border-radius: 24px;
+  background-color: #e8effca6;
+
+  .top {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 80px;
+  }
+
+  .text {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 40%;
+
+    .title {
+      color: #2e2e39;
+      font-weight: 700;
+      font-size: 24px;
+    }
+
+    .content {
+      color: #454557;
+      font-weight: 400;
+      font-size: 18px;
+    }
+  }
+
+  .bottom {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
