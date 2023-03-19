@@ -1,5 +1,6 @@
 import "assets/scss/App.scss";
 import CardsWrapper from "components/CardsWrapper";
+import VirusReport from "components/VirusReport";
 import Header from "./components/Header";
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
     <div className="App">
       <Header />
       <CardsWrapper />
+      <VirusReport />
     </div>
   );
 }
