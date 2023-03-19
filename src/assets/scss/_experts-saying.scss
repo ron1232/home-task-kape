@@ -1,0 +1,34 @@
+.experts-saying {
+  height: 558px;
+  width: 59.375%;
+  color: #2e2e39;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 156px;
+  display: flex;
+  margin-bottom: 30px;
+
+  .left-side {
+    width: 50%;
+
+    .title {
+      font-size: 48px;
+      font-weight: 700;
+    }
+  }
+
+  .items {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+
+    .item {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      font-weight: 400;
+      font-size: 18px;
+    }
+  }
+}

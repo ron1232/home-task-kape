@@ -1,0 +1,21 @@
+.header {
+  background-image: url(../images/header-image.png);
+  height: 698px;
+}
+
+.header-title {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 47px;
+
+  .top-title {
+    font-weight: 700;
+    font-size: 56px;
+  }
+
+  .subtitle {
+    font-weight: 500;
+    font-size: 32px;
+  }
+}
