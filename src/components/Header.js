@@ -1,4 +1,3 @@
-import HeaderImage from "assets/images/header-image.png";
 import HeaderTitle from "./HeaderTitle";
 import TopBar from "./TopBar";
 

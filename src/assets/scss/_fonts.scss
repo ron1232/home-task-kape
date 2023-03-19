@@ -12,11 +12,29 @@
 @font-face {
   font-family: "Red Hat Display";
   font-weight: 700;
-  src: url(../fonts/red-hat.display-bold.otf);
+  src: url(../fonts/RedHatDisplay-Bold.ttf);
+}
+
+@font-face {
+  font-family: "Red Hat Display";
+  font-weight: 600;
+  src: url(../fonts/RedHatDisplay-SemiBold.ttf);
 }
 
 @font-face {
   font-family: "Red Hat Display";
   font-weight: 500;
   src: url(../fonts/red-hat.display-medium.otf);
+}
+
+@font-face {
+  font-family: "Red Hat Display";
+  font-weight: 400;
+  src: url(../fonts/RedHatDisplay-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Inter";
+  font-weight: 400;
+  src: url(../fonts/Inter-Regular.ttf);
 }

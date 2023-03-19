@@ -31,9 +31,6 @@ h4 {
   display: flex;
   justify-content: space-around;
   align-items: center;
-
-  .trustpilot {
-  }
 }
 
 .header-title {
@@ -50,5 +47,195 @@ h4 {
   .subtitle {
     font-weight: 500;
     font-size: 32px;
+  }
+}
+
+.cards-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-top: -18rem;
+
+  .card {
+    height: 802px;
+    width: 364px;
+    background-color: white;
+    box-shadow: 4px 12px 40px rgba(8, 27, 62, 0.3);
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #454557;
+    position: relative;
+
+    &-image {
+      max-height: 183px;
+      margin-top: -3rem;
+    }
+
+    .discount {
+      width: 90px;
+      height: 90px;
+      background: #f72928;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      flex-direction: column;
+      font-weight: 700;
+      position: absolute;
+      top: -4rem;
+      left: 2.5rem;
+
+      .title {
+        font-size: 25px;
+      }
+
+      .subtitle {
+        font-size: 10px;
+      }
+    }
+
+    .titles {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 31.5px;
+
+      .title {
+        font-weight: 700;
+        font-size: 26px;
+        line-height: 34px;
+      }
+
+      .subtitle {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 20px;
+      }
+    }
+
+    .price {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 23px;
+
+      .title {
+        color: #ff5958;
+        font-weight: 700;
+        font-size: 26px;
+      }
+
+      .subtitle {
+        display: flex;
+        gap: 0.3rem;
+        font-size: 13px;
+        color: #7e7e9c;
+
+        .new-price {
+          font-weight: 700;
+        }
+
+        .old-price {
+          text-decoration: line-through;
+        }
+      }
+    }
+
+    .buy-now {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      margin-top: 13px;
+
+      .btn {
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 20px;
+        padding: 14px 88px;
+        border: 1px solid #454557;
+        filter: drop-shadow(0px 8px 20px rgba(252, 108, 88, 0.3));
+        border-radius: 8px;
+        background-color: transparent;
+
+        &.glow {
+          background: linear-gradient(182.22deg, #ffd800 -0.05%, #ffa700 98%);
+          border: 1px solid #edb100;
+          box-shadow: 0px 8px 20px rgba(252, 108, 88, 0.3);
+        }
+      }
+
+      .subtitle {
+        color: #7e7e9c;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        font-size: 13px;
+      }
+    }
+
+    .seperator {
+      height: 1px;
+      width: 87.5%;
+      background: #dddddd;
+      margin-top: 32px;
+      margin-bottom: 32px;
+    }
+
+    .includes {
+      display: flex;
+      flex-direction: column;
+      width: 87.5%;
+
+      .title {
+        // width: 87.5%;
+        font-weight: 500;
+        font-size: 15px;
+      }
+
+      .list {
+        display: flex;
+        flex-direction: column;
+        font-size: 15px;
+
+        &-item {
+          border-radius: 10px;
+          display: flex;
+          margin-top: 12px;
+          gap: 0.4rem;
+
+          &.glow {
+            background-color: #ffc0011a;
+            padding: 0 20px;
+          }
+
+          &-image {
+            margin-top: 4px;
+          }
+
+          &-text {
+            display: block;
+
+            .text-bold {
+              font-weight: 700;
+              margin-right: 5px;
+            }
+          }
+        }
+      }
+    }
+
+    .footer-card {
+      font-family: "Inter";
+      color: #7e7e9c;
+      position: absolute;
+      bottom: 1rem;
+      font-weight: 400;
+      font-size: 11px;
+    }
   }
 }
