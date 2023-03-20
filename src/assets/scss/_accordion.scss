@@ -1,0 +1,40 @@
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  .seperator {
+    margin-top: 24px;
+  }
+
+  .accordion-card {
+    padding: 17px 31px;
+    border: 1px solid #8797a7;
+    border-radius: 55px;
+    display: flex;
+    align-items: center;
+    gap: 21px;
+    font-weight: 400;
+    font-size: 16px;
+
+    &.open {
+      background: #4f4f64;
+      color: #ffffff;
+    }
+
+    .btn {
+      width: 10px;
+      height: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .accordion-content {
+    padding-left: 31px;
+    color: #7e7e9c;
+    font-weight: 400;
+    font-size: 14px;
+  }
+}
