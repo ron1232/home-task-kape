@@ -5,4 +5,11 @@
   align-items: center;
   padding: 0 280px;
   margin-top: 120px;
+
+  @include media("<=687px") {
+    background: url(../images/footer-bg-mobile.png);
+    background-size: cover;
+    justify-content: center;
+    padding: 0;
+  }
 }
