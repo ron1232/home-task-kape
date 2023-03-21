@@ -22,6 +22,10 @@
     color: #454557;
     position: relative;
 
+    @include media("<=500px") {
+      min-height: 879px;
+    }
+
     &-image {
       height: 183px;
       margin-top: -3rem;
@@ -203,6 +207,11 @@
           font-size: 12px;
         }
 
+        @include media("<=500px") {
+          font-size: 16px;
+          margin-bottom: 10px;
+        }
+
         &-item {
           width: 100%;
           border-radius: 10px;
@@ -227,6 +236,10 @@
             .text-bold {
               font-weight: 700;
               margin-right: 5px;
+            }
+
+            @include media("<=500px") {
+              padding-right: 20px;
             }
           }
         }
