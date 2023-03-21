@@ -1,8 +1,8 @@
-import VIcon from "assets/images/v-icon.png";
 import DollarSpin from "assets/images/dollar-spin.png";
 import DownArrow from "assets/images/down-arrow.png";
 import useIsMobile from "hooks/useIsMobile";
 import { useState } from "react";
+import CardListItem from "./CardListItem";
 
 const Card = (props) => {
   const isMobile = useIsMobile();
@@ -58,30 +58,7 @@ const Card = (props) => {
         {open && (
           <div className="list">
             {props.includes.list.map((item) => (
-              <div
-                key={item.textBold}
-                className={`list-item ${item.glow ? "glow" : ""}`}
-              >
-                <img
-                  className="list-item-image"
-                  src={VIcon}
-                  height={13}
-                  alt=""
-                />
-                <div className="list-item-text">
-                  <span
-                    className="text-bold"
-                    style={{
-                      color: item.textBoldColor
-                        ? item.textBoldColor
-                        : "initial",
-                    }}
-                  >
-                    {item.textBold}
-                  </span>
-                  {item.text && <span className="text">{item.text}</span>}
-                </div>
-              </div>
+              <CardListItem key={item.textBold} {...item} />
             ))}
           </div>
         )}

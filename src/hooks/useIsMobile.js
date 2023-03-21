@@ -1,7 +1,7 @@
 const { useState, useEffect, useMemo } = require("react");
 
 const useIsMobile = () => {
-  const [dimension, setDimension] = useState(0);
+  const [dimension, setDimension] = useState(window.innerWidth);
 
   useEffect(() => {
     window.addEventListener("resize", () => {
