@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import Essential from "assets/images/essential.png";
 import Advanced from "assets/images/advanced.png";
 import Extended from "assets/images/advanced.png";
@@ -131,6 +131,7 @@ const usePriceData = () => {
 
         setPriceData(copyedPriceData);
       });
+    // eslint-disable-next-line
   }, []);
 
   return {
