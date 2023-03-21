@@ -48,7 +48,10 @@ const Card = (props) => {
         <span className="title">{props.includes.title}</span>
         <div className="list">
           {props.includes.list.map((item) => (
-            <div className={`list-item ${item.glow ? "glow" : ""}`}>
+            <div
+              key={item.textBold}
+              className={`list-item ${item.glow ? "glow" : ""}`}
+            >
               <img className="list-item-image" src={VIcon} height={13} alt="" />
               <div className="list-item-text">
                 <span

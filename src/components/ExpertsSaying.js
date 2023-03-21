@@ -5,7 +5,6 @@ import Softonic from "assets/images/softonic.png";
 import Safety from "assets/images/safety.png";
 import SafetyMobile from "assets/images/safety-mobile.png";
 import Comparitech from "assets/images/comparitech.png";
-import { useEffect, useMemo, useState } from "react";
 import useIsMobile from "hooks/useIsMobile";
 
 const ExpertsSaying = () => {

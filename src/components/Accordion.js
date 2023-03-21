@@ -43,7 +43,7 @@ const Accordion = () => {
   return (
     <div className="accordion">
       {data.map((item) => (
-        <AccordionCard {...item} />
+        <AccordionCard key={item.title} {...item} />
       ))}
     </div>
   );

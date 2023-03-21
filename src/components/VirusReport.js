@@ -3,7 +3,6 @@ import TopTenGold from "assets/images/topten-gold.png";
 import TopTenBlue from "assets/images/topten-blue.png";
 import Excellent from "assets/images/excellent.png";
 import Virus from "assets/images/virus.png";
-import { useEffect, useMemo, useState } from "react";
 import useIsMobile from "hooks/useIsMobile";
 
 const VirusReport = () => {

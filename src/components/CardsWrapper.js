@@ -7,7 +7,7 @@ const CardsWrapper = () => {
   return (
     <div className="cards-wrapper">
       {Object.keys(priceData).map((item) => (
-        <Card {...priceData[item]} />
+        <Card key={item} {...priceData[item]} />
       ))}
     </div>
   );

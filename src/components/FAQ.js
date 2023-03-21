@@ -1,5 +1,4 @@
 import useIsMobile from "hooks/useIsMobile";
-import { useEffect, useMemo, useState } from "react";
 import Accordion from "./Accordion";
 
 const FAQ = () => {
