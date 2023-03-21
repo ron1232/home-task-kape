@@ -3,11 +3,29 @@ import TopTenGold from "assets/images/topten-gold.png";
 import TopTenBlue from "assets/images/topten-blue.png";
 import Excellent from "assets/images/excellent.png";
 import Virus from "assets/images/virus.png";
+import { useEffect, useMemo, useState } from "react";
 
 const VirusReport = () => {
+  const [dimension, setDimension] = useState(0);
+
+  useEffect(() => {
+    window.addEventListener("resize", () => {
+      setDimension(window.innerWidth);
+    });
+    return () => {
+      window.removeEventListener("resize", () => {
+        setDimension(window.innerWidth);
+      });
+    };
+  }, []);
+
+  const isMobile = useMemo(() => dimension <= 760, [dimension]);
+
   return (
     <div className="virus-report">
-      <h3 className="top-title">Virus Bulletin intego AV Report</h3>
+      <h3 className="top-title">
+        {isMobile ? "Virus Bulletin Awards" : "Virus Bulletin intego AV Report"}
+      </h3>
       <div className="inner-content">
         <div className="left-side">
           <h6 className="title">Awards</h6>
@@ -20,7 +38,10 @@ const VirusReport = () => {
           </div>
         </div>
         <div className="right-side">
-          <h6 className="title">VB Detailed Test Results</h6>
+          <h6 className="title">
+            {isMobile && <img src={Virus} alt="" />}
+            {isMobile ? "Detailed Test Results" : "VB Detailed Test Results"}
+          </h6>
           <div className="stats">
             <div className="stats-item">
               <span>Performance</span>
