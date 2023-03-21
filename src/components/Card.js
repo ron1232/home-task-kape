@@ -1,7 +1,13 @@
 import VIcon from "assets/images/v-icon.png";
 import DollarSpin from "assets/images/dollar-spin.png";
+import DownArrow from "assets/images/down-arrow.png";
+import useIsMobile from "hooks/useIsMobile";
+import { useState } from "react";
 
 const Card = (props) => {
+  const isMobile = useIsMobile();
+  const [open, setOpen] = useState(true);
+
   const buyNow = () => {
     fetch("http://localhost:5000/user-pressed-buy-now", {
       method: "GET",
@@ -45,28 +51,40 @@ const Card = (props) => {
       </div>
       <div className="seperator" />
       <div className="includes">
-        <span className="title">{props.includes.title}</span>
-        <div className="list">
-          {props.includes.list.map((item) => (
-            <div
-              key={item.textBold}
-              className={`list-item ${item.glow ? "glow" : ""}`}
-            >
-              <img className="list-item-image" src={VIcon} height={13} alt="" />
-              <div className="list-item-text">
-                <span
-                  className="text-bold"
-                  style={{
-                    color: item.textBoldColor ? item.textBoldColor : "initial",
-                  }}
-                >
-                  {item.textBold}
-                </span>
-                {item.text && <span className="text">{item.text}</span>}
+        <span className="title" onClick={() => isMobile && setOpen(!open)}>
+          {props.includes.title}{" "}
+          {isMobile && <img className="down-arrow" src={DownArrow} alt="" />}
+        </span>
+        {open && (
+          <div className="list">
+            {props.includes.list.map((item) => (
+              <div
+                key={item.textBold}
+                className={`list-item ${item.glow ? "glow" : ""}`}
+              >
+                <img
+                  className="list-item-image"
+                  src={VIcon}
+                  height={13}
+                  alt=""
+                />
+                <div className="list-item-text">
+                  <span
+                    className="text-bold"
+                    style={{
+                      color: item.textBoldColor
+                        ? item.textBoldColor
+                        : "initial",
+                    }}
+                  >
+                    {item.textBold}
+                  </span>
+                  {item.text && <span className="text">{item.text}</span>}
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        )}
       </div>
       <div className="footer-card">
         Discount applicable for the first payment only
