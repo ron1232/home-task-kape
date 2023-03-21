@@ -18,6 +18,10 @@
     font-size: 16px;
     cursor: pointer;
 
+    @include media("<=1300px") {
+      border-radius: 22px;
+    }
+
     &.open {
       background: #4f4f64;
       color: #ffffff;

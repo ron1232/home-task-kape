@@ -69,6 +69,10 @@
         font-size: 22px;
         margin-left: 48px;
 
+        @include media("<=1800px") {
+          margin-top: 30px;
+        }
+
         @include media("<=900px") {
           display: none;
         }

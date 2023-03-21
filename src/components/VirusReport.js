@@ -4,22 +4,10 @@ import TopTenBlue from "assets/images/topten-blue.png";
 import Excellent from "assets/images/excellent.png";
 import Virus from "assets/images/virus.png";
 import { useEffect, useMemo, useState } from "react";
+import useIsMobile from "hooks/useIsMobile";
 
 const VirusReport = () => {
-  const [dimension, setDimension] = useState(0);
-
-  useEffect(() => {
-    window.addEventListener("resize", () => {
-      setDimension(window.innerWidth);
-    });
-    return () => {
-      window.removeEventListener("resize", () => {
-        setDimension(window.innerWidth);
-      });
-    };
-  }, []);
-
-  const isMobile = useMemo(() => dimension <= 760, [dimension]);
+  const isMobile = useIsMobile();
 
   return (
     <div className="virus-report">

@@ -6,6 +6,10 @@
   display: flex;
   margin-bottom: 30px;
 
+  @include media("<=1800px") {
+    height: auto;
+  }
+
   @include media("<=1600px") {
     flex-direction: column;
     align-items: center;
