@@ -108,11 +108,14 @@ const usePriceData = () => {
   });
 
   useEffect(() => {
-    fetch("http://localhost:5000/getPriceByBundle?bundle=*&currency=USD", {
-      method: "GET",
-      credentials: "include",
-      headers: { "Content-Type": "application/json" },
-    })
+    fetch(
+      `${process.env.REACT_APP_BASE_URL}/getPriceByBundle?bundle=*&currency=USD`,
+      {
+        method: "GET",
+        credentials: "include",
+        headers: { "Content-Type": "application/json" },
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         const copyedPriceData = JSON.parse(JSON.stringify(priceData));

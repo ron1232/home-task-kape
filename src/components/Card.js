@@ -9,7 +9,7 @@ const Card = (props) => {
   const [open, setOpen] = useState(true);
 
   const buyNow = () => {
-    fetch("http://localhost:5000/user-pressed-buy-now", {
+    fetch(`${process.env.REACT_APP_BASE_URL}/user-pressed-buy-now`, {
       method: "GET",
       credentials: "include",
       headers: { "Content-Type": "application/json" },

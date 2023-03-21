@@ -10,7 +10,7 @@ import Header from "./components/Header";
 
 function App() {
   useEffect(() => {
-    fetch("http://localhost:5000/user-landed-in-page", {
+    fetch(`${process.env.REACT_APP_BASE_URL}/user-landed-in-page`, {
       method: "GET",
       credentials: "include",
       headers: { "Content-Type": "application/json" },
