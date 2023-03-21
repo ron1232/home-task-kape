@@ -120,7 +120,7 @@ const usePriceData = () => {
         const bundles = ["essential", "advanced", "extended"];
 
         bundles.forEach((bundle) => {
-          copyedPriceData[bundle].discount = data[bundle].discount;
+          copyedPriceData[bundle].discount = `${data[bundle].discount}%`;
           copyedPriceData[
             bundle
           ].price.title = `Only $${data[bundle].monthlyPrice}/month`;
