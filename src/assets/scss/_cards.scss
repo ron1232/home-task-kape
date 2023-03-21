@@ -4,8 +4,14 @@
   margin-top: -18rem;
   width: 59.375%;
 
+  @include media("<=1400px") {
+    flex-direction: column;
+    align-items: center;
+    gap: 90px;
+  }
+
   .card {
-    height: 802px;
+    min-height: 802px;
     width: 364px;
     background-color: white;
     box-shadow: 4px 12px 40px rgba(8, 27, 62, 0.3);
@@ -62,11 +68,12 @@
       left: 2.5rem;
 
       .title {
-        font-size: 25px;
+        font-size: 30px;
+        line-height: 22.5px;
       }
 
       .subtitle {
-        font-size: 10px;
+        font-size: 15px;
       }
     }
 
@@ -80,6 +87,10 @@
         font-weight: 700;
         font-size: 26px;
         line-height: 34px;
+
+        @include media("<=1500px") {
+          font-size: 20px;
+        }
       }
 
       .subtitle {
@@ -134,6 +145,10 @@
         border-radius: 8px;
         background-color: transparent;
 
+        @include media("<=1450px") {
+          font-size: 15px;
+        }
+
         &.glow {
           background: linear-gradient(182.22deg, #ffd800 -0.05%, #ffa700 98%);
           border: 1px solid #edb100;
@@ -174,8 +189,15 @@
         flex-direction: column;
         font-size: 15px;
         padding-left: 32px;
-
         align-items: center;
+
+        @include media("<=1846px") {
+          font-size: 14px;
+        }
+
+        @include media("<=1600px") {
+          font-size: 12px;
+        }
 
         &-item {
           width: 100%;

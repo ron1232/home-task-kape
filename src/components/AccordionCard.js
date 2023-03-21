@@ -7,8 +7,11 @@ const AccordionCard = ({ title, content }) => {
 
   return (
     <>
-      <div className={`accordion-card ${open ? "open" : ""}`}>
-        <div className="btn" onClick={() => content && setOpen(!open)}>
+      <div
+        onClick={() => content && setOpen(!open)}
+        className={`accordion-card ${open ? "open" : ""}`}
+      >
+        <div className="btn">
           <img
             src={open ? MinusIcon : PlusIcon}
             alt=""

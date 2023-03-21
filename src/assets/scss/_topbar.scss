@@ -8,4 +8,10 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+
+  .trustpilot {
+    @include media("<=500px") {
+      display: none;
+    }
+  }
 }

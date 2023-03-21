@@ -1,6 +1,10 @@
 .header {
   background-image: url(../images/header-image.png);
   height: 698px;
+
+  @include media("<=tablet") {
+    background-position-x: 65%;
+  }
 }
 
 .header-title {
@@ -12,10 +16,25 @@
   .top-title {
     font-weight: 700;
     font-size: 56px;
+    text-align: center;
+
+    @include media("<=1086px") {
+      font-size: 4vw;
+      margin-bottom: 1.5rem;
+    }
+
+    @include media("<=700px") {
+      font-size: 7vw;
+      margin-bottom: 1.5rem;
+    }
   }
 
   .subtitle {
     font-weight: 500;
     font-size: 32px;
+
+    @include media("<=1084px") {
+      font-size: 3.25vw;
+    }
   }
 }
