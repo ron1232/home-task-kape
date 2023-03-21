@@ -6,12 +6,29 @@
   display: flex;
   margin-bottom: 30px;
 
+  @include media("<=1600px") {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    width: 100%;
+    text-align: center;
+    gap: 40px;
+  }
+
   .left-side {
     width: 50%;
+
+    @include media("<=1200px") {
+      width: 90%;
+    }
 
     .title {
       font-size: 48px;
       font-weight: 700;
+
+      @include media("<=800px") {
+        font-size: 8vw;
+      }
     }
   }
 
@@ -27,6 +44,18 @@
       gap: 8px;
       font-weight: 400;
       font-size: 18px;
+
+      @include media("<=1500px") {
+        align-items: center;
+      }
+    }
+  }
+
+  .right-side {
+    .image {
+      @include media("<=1200px") {
+        width: 100%;
+      }
     }
   }
 }

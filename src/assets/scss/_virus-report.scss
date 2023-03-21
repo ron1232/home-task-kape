@@ -102,6 +102,13 @@
         padding-bottom: 5rem;
       }
 
+      @include media("<=1100px") {
+        background: #ffffff;
+        padding-top: 30px;
+        margin-right: 16px;
+        margin-left: 16px;
+      }
+
       .title {
         font-weight: 700;
         font-size: 22px;

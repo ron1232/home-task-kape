@@ -2,8 +2,25 @@ import Experts from "assets/images/experts.png";
 import WindowsReport from "assets/images/windows-report.png";
 import Softonic from "assets/images/softonic.png";
 import Safety from "assets/images/safety.png";
+import Comparitech from "assets/images/comparitech.png";
+import { useEffect, useMemo, useState } from "react";
 
 const ExpertsSaying = () => {
+  const [dimension, setDimension] = useState(0);
+
+  useEffect(() => {
+    window.addEventListener("resize", () => {
+      setDimension(window.innerWidth);
+    });
+    return () => {
+      window.removeEventListener("resize", () => {
+        setDimension(window.innerWidth);
+      });
+    };
+  }, []);
+
+  const isMobile = useMemo(() => dimension <= 760, [dimension]);
+
   return (
     <div className="experts-saying">
       <div className="left-side">
@@ -18,7 +35,11 @@ const ExpertsSaying = () => {
             </span>
           </div>
           <div className="item">
-            <img src={Softonic} width={274} alt="" />
+            <img
+              src={isMobile ? Comparitech : Softonic}
+              width={isMobile ? null : 274}
+              alt=""
+            />
             <span>
               “It offers secure PC protection while running smoothly on your
               system, so this is an excellent recommendation for any type of
