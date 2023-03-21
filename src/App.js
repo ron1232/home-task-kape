@@ -5,9 +5,18 @@ import FAQ from "components/FAQ";
 import Features from "components/Features";
 import Footer from "components/Footer";
 import VirusReport from "components/VirusReport";
+import { useEffect } from "react";
 import Header from "./components/Header";
 
 function App() {
+  useEffect(() => {
+    fetch("http://localhost:5000/user-landed-in-page", {
+      method: "GET",
+      credentials: "include",
+      headers: { "Content-Type": "application/json" },
+    });
+  }, []);
+
   return (
     <div className="App">
       <Header />

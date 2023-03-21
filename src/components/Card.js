@@ -2,6 +2,14 @@ import VIcon from "assets/images/v-icon.png";
 import DollarSpin from "assets/images/dollar-spin.png";
 
 const Card = (props) => {
+  const buyNow = () => {
+    fetch("http://localhost:5000/user-pressed-buy-now", {
+      method: "GET",
+      credentials: "include",
+      headers: { "Content-Type": "application/json" },
+    });
+  };
+
   return (
     <div className="card">
       <div className="discount">
@@ -24,7 +32,10 @@ const Card = (props) => {
         />
       </div>
       <div className="buy-now">
-        <button className={`btn ${props.buyNowGlow ? "glow" : ""}`}>
+        <button
+          onClick={() => buyNow()}
+          className={`btn ${props.buyNowGlow ? "glow" : ""}`}
+        >
           Buy Now
         </button>
         <span className="subtitle">
