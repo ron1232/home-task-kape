@@ -86,6 +86,9 @@
 
         @include media("<=1100px") {
           flex-wrap: wrap;
+          justify-content: center;
+          margin-left: 22px;
+          margin-right: 22px;
 
           :last-child {
             display: none;
